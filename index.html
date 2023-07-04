@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="SBM.jpg">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>B.M.S</title>
+</head>
+<body>
+<!----------------------header section layout --------------------->
+  <header class="header">
+    <a href="#portfolio" class="logo"> Portfolio</a>
+    <nav class="navbar">
+      <a href="#home" id="item">Home</a>
+      <a href="#about" id="item">About</a>
+      <a href="#services" id="item">Services</a>
+      <a href="#portfolio" id="item" onclick="activeNavItem(this)">Portfolio</a>
+      <a href="#galleria" id="item"> Galleria</a>
+      <a href="#contact" id="item">Contact</a>
+    </nav>
+  </header>
+<!------------------------- home section layout -------------------->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3> Hello, it's Me</h3>
+      <h1>Bosire Saul</h1>
+      <h3> And I am a <span> Frontend Developer</span></h3>
+      <p> Here is a short paragraph about me</p>
+      <div class="social-media">
+        <a href="https://web.facebook.com/profile.php?id=100088255036522&sk=about"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAARxJREFUWEft1j1KBEEQhuFnFRMNRDEwNjHQM2iiBxA8g5GxgcbiIbyDsGCkGAmeQE0FU/EnUhD/6GBhaGaWnt1hHLE7m6G66q2vvm66p0Or1yEWGaZqGk0qM4VtLOMDz3jEPa5S7NAETIDYxR4WS4reYLUtmBNsDSl2i5U2YAJEgBm2WoM5w2ZXYJ4wF8Gc4gDX+EoZzyBmXAO/Ixh4sL4xj5c6EE3BhCM8WSj8iplRQMKecZWJYd4w/e9gZtGPul6PvoNhL6N/5zhMUavOmBbwkJI0ijnCfsq+NmB2cNwVmA1cdAVmCXdNw5Tliy+9Xz3aGaZq5FmZrEzKdVCMyZ7JnvnTnlnDRKGDz5LHVXKDdd4zyUlHDcwwVcr9ALXDQCSAoW7qAAAAAElFTkSuQmCC"/></a>
+        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAlFJREFUWEft1kuoTXEUx/HP9YgiJigZMKDIyCsx8MijTAwUikwkBl5hIK88SsmjSAYoyUApFAMlkTJRHsnQQIokEwbe71btczv32ufs//866Q7OrtM57fNbv/93r/9/rb069KKroxexaMM02o12Zv5nZmZiLaZgNB7jHk7jVR3IEMSn817ZNk3ECuzKrLR+OIZNDeI+Yy76YAGWF8BfavoymDDcir04kAG0J0P/s3jgG4jfAVpa2rcwv4DYjYMJQOPxFP0TtL9xFUPxFiubZeYKltSZXsdmvGiy0HYcSgCplzzCLHxqBrMNR7sZf8OR4hC+LFn0EpZlwNzBYnysjyk7M9Nxv4nxbZzHAzzHd9zEwgyYeQigLlcZTNw7gzUJ5r8QmRqEYQn6miTKPkq+EmZn8dQBk5P6DBaj8DoF5lqxnznmOdrI5gD8SIE5XlRPzgI52jiPM8oCys7MpLL9zFmtQrsP+1NhQlfrwi1k6LSahoc5MKHdgh0Y3kKigAiY0qvZPBNNaTLmYHaLgJbick9gAuBuiyDC5hkmIKopOzMRcAGrWgAUZRyd/a9GV+9dNXb2xWGsL3pDT7k24FRVcBVMLX5E8YZdVzdeVHnX/j/ZZODq4pEKMw4nsCiVoNA17Ck5pR2QYxENMKopZtrYstQrZpSNOJcaELrumYlyXo14xQ/OMarTxqGPYetNbnzZNg0sKigG5toAXeX7ARdxtlF3rTIoy0z3mJhToiSnYgxGFhl7j3eI7yeIUfVryoLNNKkH+F/XSYpvwzRKUzszjTLzB25yWyTUqK8VAAAAAElFTkSuQmCC"/></a>
+        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAcdJREFUWEft10+IjWEUx/HPbGwkKwtlR5E/CxbKxF6sKJmyGbKRLP1JKQs1Q3Y2Svm3IQuzUCZbzGxnkJomWYjIlFJiY4yOHrq9zntn4b63m7mn7uY8531/3/ec5znPuQN6yAZ6iEUfpq4adZkZxAmswzQu4lXTJc1gduFxRfg9tuNtk0AZzH3sS0Qv4XS3YV5iYyI6hv3dhrmLg4noBZzrNsy2smeWtwjPYgc+dRsm9KJMx7EWz3AZc02CxLuXTNOLD11Tfh/wBvPtsptlZi9OJg9FE3xR/FtwJYk5hI84hjNY3RLzFQ8wWhrpX49nMEdxLRGKZvi0+HfiSU3MVWxqk4EfOIzb1ZhOw0wirpLF7HsBjlP6xzoNsxhE63pkMMrZOMy7crEuK/0pg3xdWkejMHGHnce3ojKEOzUpW4Evv9c6XabYAxuwUBG/hwMJ0GbEXfjLOg0zgrOJ6KkyE1WX4lRONAUTR/ZmAhP+64l/Nx41BTOMW4loTAExDVRtD8b/FSabBuOdR3AjEY39EvumatHtH/Zh+pnp75kkA//3aYrpbH3y1VP4XPwrsTWJmUGMmFVbVTNwPW/9x7FkBvIkQe1dPZWZnwMciSTe4IS5AAAAAElFTkSuQmCC"/></a>
+      </div>
+      <a href="https://docs.google.com/document/d/1cKmAwGLftrrtTRc_67JH9P-xfDa1uFiIMD9GMhYR2gk/edit?usp=drive_link" class="btn" download="resume.docx">Download CV</a>
+    </div>
+    <div class="home-img">
+      <img src="nobg.png" alt="f....">
+    </div>
+  </section>
+<!---------------------- about section layout --------------------->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="nobg.png" alt="no image">
+   </div>
+   <div class="about-content">
+    <h2> About <span>Me!!</span></h2>
+    <h3> Hi, am here to help you in your next project!</h3>
+    <p>Embark on a captivating journey with Bosire Saul, where professionalism meets playfulness. With boundless creativity and an unstoppable drive, Saul crafts enchanting narratives that leave a lasting impact. 
+      Prepare for exhilarating adventures in the extraordinary world of Saul.</p>
+      <a href="#" class="btn">Read more</a>
+  </div>
+  </section>
+<!----------------------- services section layout------------------>
+  <section class="services" id="services">
+    <h2> MY <span>SERVICES</span></h2>
+    <div class="services-content">
+      <div class="web-dev">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAA21JREFUWEfd12nIblMUB/DfRZQSinSTIUPGD4RCipJMRWYRklyUIUPIFDIrZJ6SkCnzrMiQQomIKMMHFD4JkSn0v63zdu5xnvd9zvPcrjfry/Ocffbe67/X+q//XmeBeWQL5hEW/yswy+FSHIEVcR/Oxu+TRHzayByHWzuOT8O1/wWYm3FCx/E9OGpZg1kZT2HXjuM3sTt+GgpokjRlzZG4Ar9gg5bTv/Ap1sB5uB0ZG8uGgtkR1xeA85HoBNQB+A1P4Ez8jMvwLU7BK+OgGQVmczyGVfAQ7kScH4QbcRFSSZ/XuzPKWeaEwBvhV5yL0/FcrQ+XDql3h+LdNsg+MHHyETbtnObp2jhpiN2EA8txw4+VKk1P4qSatx6uwsGd/b7AJvizGe8DE0K+1BPW6MgfNb4ZPsSxuKszNyl7GFvi49a7pDF7tG0f5JCLrQ/Mzni1s+hrrNMaC9jVsS3+7gEejoS47Ur7DBt25u6F52cDE4APtsIaMiYdL9SibPAstsfbI4iZqLyPffFMzdmporBaPSeV+7erbbZqSrgfwbr4qjZYvvgUEHMJW6puD2zRSm+AfI+jcXf3ILOB2brYng1+qIUn4/Ii7TcjotIMJ42ptktwTYsWSd8ueG0aMM3mqYxoyzh2fFVSKioRyeGXCpiEPRyIhjRVNRegOI9MvI4AWypg1sQnRbjcR0MsxA2YptQnisxWeA+r4oHSiN2GoGjNvR9rI7IRKchvAC5hsxG4AZMrIKUetQwhJ7GFiM4cjseHgkkJn1Vd3JdV4rljprHc4sdg/dr34m5H2BeZAHmxo553YNE0SKoCc8DG3igfMy1qH5gI1YxE18pUT1qCaSytRKO+zT77Vdux+LkPTMOVruN3qk+ZBFD6nu16Fu6At5rxUQTOTRzJbuy7qoJzSsb7LsdRIPPlEJFM+tdqTXq07ryZoVFgsvDEOk3agVx2aRci7bnBE/J/lWYHzTa4ARtXCxre7Yk0VR/UF8RMLzMqTbOlIZ3fhcgdlU4whIzMp/xXqKrL75U4rLrCC8Ztzof2wA3Q9CVXY2/8WA143uV/wLzc6QrH4tmkYJrNu9zKeNQ24jbYpgVzS12Abcf31qfMMgcTIbyt4/VUXDcYyQidGbJPqi4VFr2I5dMjpB63xVjC17RpGgJ8zrnzCsw/EuO0JOLMbKMAAAAASUVORK5CYII="/>
+        <h3> WEB DEVELOPMENT</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi minima error distinctio ab, ratione porro aliquam labore voluptas a consequuntur, 
+          earum libero aspernatur? Provident, fugiat nulla. Nihil ex tempora iste.</p>
+        <a href="#"> Read More</a>
+      </div>
+      <div class="web-dev">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAjRJREFUWEft10uoT1EUx/HPDRHKKxJKKFJKiWTkHRMZYSCJFCZK4ZKBmQxMpAzIQEmRMBAyICWZSGJgQCEG8izklUer9q0j93/2Of976t5ijU7ttdfvu9deZ511OvQh6+hDLP4JmDnYgdFYVDX7TWemH/ZjVwK4iBW9BXMaqwvim3G0N2BW4kJB+Bmm4mtvwNzCvCT8E0twvSpI+DVVM0PxIQm/whacqwPSDswATEKI38OPJDgGx3AJJ/AF4zAZL/AEv3JwVTMzHnuxAYNS0E84j1O4irFYj6WYiREF8fc4g07Ec7dWBSZ6xhWMzJ2swvpTLMbj7nxzMLNxA4MrCFV1iXgL6sL0T3cdV9SUncW6VFN/xSzLzKp0z02BPEBceRR37Zq5jOVNkWBN7nBlmXmEKQ3CDMS3snhlMN8RddOEvU5f8NJYrWACImCasrcYlQtWlpl3GJ4LUGM9ZpvIUEsrg3mIaTXEcq7ZcaIM5iTW5hRqrL/EjLLslMFsSh+/GnpZ1ztYhjfdeZbBTEwdOKtQ0+E5tiO68R+W+zY13fi6xA9gT12Y6MAB1KRF45uAGMJqZSacr2FhgzSHsa1uzXT5x+sdU120855a1Mt0fGwXJvZtxZEeksSQPh83W8XJFXBx33Fs7AHQThws218HJv4W92E3YjAPi2E7fkfuIjp2zL6z0hw8LPl8Tm/OodxB6sB0xRqSRGPv7cIfQlEr6msuAuR+2UBV3NQOTO6Aba//h2mVut9+6Fkk5e7wTgAAAABJRU5ErkJggg=="/>
+        <h3> ANDROID APP DEVELOPMENT</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci debitis illo esse odio quidem voluptas consequuntur dolore sunt 
+          quaerat exercitationem ea reprehenderit. Sunt harum blanditiis, architecto odio ex quis!</p>
+        <a href="#"> Read More</a>
+      </div>
+      <div class="web-dev">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAARhJREFUWEft169KBUEUx/HPtRjMgggmQUSr2Se4oCAICjbBKPgeFpPFYvEGizYfQgyCKGZBBJM+gCwc5Qo7sKzX/QNz0i/MnP3Obw5n9gx0KAYdYpFhUrfRlDPbWAmICzyVATUFc4mtANjEVYYJB7Iz59gLN3ZRFGsRrTiTYVJ9qxVnhlgLoqJn3IUeh9nBqKRmNnA9yT5zioNIuI+zEpjGCjjDpAq1FWeOcRREhzgJnWGyM6lCzc70wplFLATpM15CL2E+9CNeQy9jLvQD3kKvYjb0Pd4n+Tb9y+zX1HRQCT4FM42bShnqLSrmpu9X/ydDCmYGn/W+U2nX7dj/UL9gprBe6Yz1Fn2gcOdX9KKA6533j7s65cwXD7SAJA5EJmYAAAAASUVORK5CYII="/>
+        <h3> DIGITAL MARKETING </h3>
+        <P> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ullam, tempore maiores nihil quam quaerat dolorem quis qui odit atque vitae, 
+          ratione in impedit soluta voluptates laboriosam ducimus. Repellat, placeat!</P>
+        <a href="#"> Read More</a>
+      </div>
+    </div>
+  </section>
+  <!--------------------------portfolio layout------------------------------->
+  <section class="portfolio" id="portfolio">
+    <h2> LATEST <span>PROJECTS</span> </h2>
+    <div class="container">
+      <div class="content">
+        <img src="https://as2.ftcdn.net/v2/jpg/03/08/31/63/1000_F_308316395_XOuQYLP6AK2ergU7L9yrtMzYxDeoFb4c.jpg" alt="no image found">
+        <div class="layer">
+          <h4> The Hanging Man</h4>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, est. Dolorum consequuntur temporibus obcaecati vitae officiis. Optio est facilis hic vel placeat, 
+            nisi perferendis porro veritatis incidunt architecto consequuntur harum.</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="content">
+        <img src="https://t3.ftcdn.net/jpg/01/17/33/22/360_F_117332203_ekwDZkViF6M3itApEFRIH4844XjJ7zEb.jpg" alt="no image found">
+        <div class="layer">
+          <h4> E-commerce website</h4>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, est. Dolorum consequuntur temporibus obcaecati vitae officiis. Optio est facilis hic vel placeat, 
+            nisi perferendis porro veritatis incidunt architecto consequuntur harum.</p>
+          <a href="projects\e-commerce\eindex.html"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="content">
+        <img src="https://previews.123rf.com/images/christitze/christitze1611/christitze161120996/65369733-movies-gold-text-on-black-background-3d-rendered-royalty-free-stock-picture-this-image-can-be.jpg" alt="no image found">
+        <div class="layer">
+          <h4> Movie Website</h4>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, est. Dolorum consequuntur temporibus obcaecati vitae officiis. Optio est facilis hic vel placeat, 
+            nisi perferendis porro veritatis incidunt architecto consequuntur harum.</p>
+          <a href="projects\mvindex.html" target="_blank"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="content">
+        <img src="https://media.istockphoto.com/id/1225050316/vector/paper-cut-sun-and-cloud-weather-icon-isolated-on-black-background-paper-art-style-vector.jpg?s=170667a&w=0&k=20&c=H7XuC1IAumCoNG8wJ5Jzy5L9F7uNu0hawwCFDtlebPo=" alt="no image found">
+        <div class="layer">
+          <h4> Weather Station</h4>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, est. Dolorum consequuntur temporibus obcaecati vitae officiis. Optio est facilis hic vel placeat, 
+            nisi perferendis porro veritatis incidunt architecto consequuntur harum.</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-------------------------------------Galleria section layout--------------------->
+  <section class="galleria" id="galleria">
+    <h2> Galleria</h2>
+    <div class="galleria-container">
+      <div class="galleria-content">
+        <img src="img3.jpg" alt="no content">
+      </div>
+      <div class="galleria-content">
+        <img src="img3.jpg" alt="no content">
+      </div>
+    </div>
+  </section>
+  <!-------------------contacts section layout----------------->
+  <section class="wrapper" id="contacts">
+    <div class="contact-container">
+      <img src="img3.jpg" alt="no image found">
+      <div class="contact-content">
+        <form action="action.php" novalidate>
+          <h2> CONTACT <span>Me!</span></h2>
+          <input type="text" placeholder="Please Enter your full name">
+          <input type="email" placeholder="Please Enter your email">
+          <input type="number" placeholder="Please Enter your phonenumber">
+          <input type="button" value="Let's talk" class="btn">
+        </form>
+      </div> 
+    </div>
+  </section>
+  <!------------------------footer section--------------------------->
+  <footer> All Rights Reserved &copy; 2023 | BSM </footer>
+  <script src="main.js"></script>
+</body>
+</html>

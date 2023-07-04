@@ -1,0 +1,349 @@
+/* ===============constants throughout the page ==================*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+:root{
+  --bg-color: rgb(7, 7, 7);
+  --second-bg-color: rgba(49, 48, 48, 0.934);
+  --text-color: rgba(30, 124, 30, 0.842);
+  --third-color: white;
+  --fourth-color: aqua;
+  --fifth-color: rgba(235, 231, 231, 0.444);
+}
+html{
+  font-size: 62.9%;
+}
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* ====================header design======================================== */
+.header{
+  width: 100%;
+  padding: 2rem 9%;
+  background:var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.logo{
+  font-size: 2.2rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+.navbar a{
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: .1s ease;
+}
+.navbar a:hover,
+.navbar a#item{
+  color: var(--second-bg-color);
+}
+
+/* ====================home section design==================== */
+.home{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-img img{
+  width: 35vw;
+}
+.home-img img{
+  border-radius: 50%;
+}
+.home-content h3{
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+.home-content h3:nth-of-type(2){
+  margin-bottom: 2rem;
+}
+span{
+  color: var(--second-bg-color);
+}
+.home-content h1{
+  font-size: 5.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.home-content p{
+  font-size: 1.6rem;
+}
+.social-media a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--third-color);
+  border: .2rem var(--text-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .1s ease;
+}
+.social-media a:hover{
+  background: var(--second-bg-color);
+  color: var(--text-color);
+}
+.btn{
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--third-color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+}
+.btn:hover{
+  background: var(--third-color);
+  color: var(--bg-color);
+}
+/* =================about section design========================= */
+.about{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  background: var(--bg-color);
+}
+.about-img img{
+  width: 35vw;
+  border-radius: 50%;
+}
+.about-content{
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-right: 12px;
+  padding: .2rem;
+}
+.about a{
+  background: var(--third-color);
+  color: var(--text-color);
+}
+.about a:hover{
+  background: var(--fifth-color);
+}
+.about h2{
+  text-align: center;
+  text-decoration: underline;
+}
+.about h3{
+  font-size: 2.5rem;
+  text-align: left;
+}
+.about p{
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 2rem 0rem 3rem;
+}
+.about span{
+  color:var(--fourth-color);
+}
+
+/* ====================Services section design============================*/
+.services{
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+.services .services-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: var(--second-color);
+}
+.services h2{
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  text-decoration: underline;
+}
+
+.services-content .web-dev{
+  flex: 1 1 10rem;
+  text-align: center;
+  border-top: none;
+  border-radius: 2rem;
+  padding: 3rem 2rem 4rem;
+  background: var(--second-bg-color);
+  box-shadow: 0 .1rem .5rem var(--second-bg-color);
+  border-bottom: .1rem solid var(--fourth-color);
+  transition: .3s ease;
+}
+.services-content .web-dev:hover{
+  box-shadow: 0 .1rem 2rem var(--third-color);
+  transform: scale(1.01)
+}
+.services-content h3{
+  font-size: 2.5rem;
+  transition: 3sec ease;
+}
+.services p{
+  font-size: 1.2rem;
+  padding: 1 1 3rem;
+}
+.services-content h3:hover{
+  color: var(--second-bg-color);
+}
+/*============================= portfolio design==============================*/
+.portfolio{
+  padding-bottom: 6rem;
+  gap: 7rem;
+  overflow: hidden;
+}
+.portfolio h2{
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.portfolio .container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 3.0rem;
+  overflow: hidden;
+}
+.portfolio .content{
+  position: relative;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.portfolio img{
+  width: 100%;
+  border-radius: .5rem;
+  outline: none;
+  transition: .2s ease;
+}
+.content:hover img{
+  transform: scale(1.02);
+}
+.content .layer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(20, 19, 19, 0.1), var(--third-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 .4rem;
+  transform: translateY(100%);
+  transition: .2s ease;
+}
+.content:hover .layer{
+  transform: translateY(0%);
+}
+.layer h4{
+  font-size: 3rem;
+}
+.layer p{
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+.portfolio a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--third-color);
+  border-radius: 50%;
+}
+.portfolio a i{
+  font-size: 2rem;
+  color: var(--text-color);
+}
+/*================galleria section design============= */
+.galleria-container{
+  display: flex;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.galleria-container::-webkit-scrollbar{
+  display: none;
+}
+.galleria-content img{
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+/*------------------- contacts design-----------------------------------*/
+.contacts{
+  gap: 7rem;
+  font-weight: 600;
+}
+.contact-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.contact-content{
+  background:rgb(70, 7, 7);
+}
+.contacts h2{
+  font-size: 3.2rem;
+  text-decoration: underline;
+}
+.contacts input{
+  width: 100%;
+  padding: 1rem;
+  margin: 3rem;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+}
+.contacts .btn{
+  padding: .2rem;
+  width: min-content;
+  height: 5rem;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  background: var(--second-bg-color);
+  color: var(--third-color);
+}
+.contacts .btn:hover{
+  color: green;
+  background: var(--bg-color);
+}
+
+
+/* ======================================footer design===========================*/
+footer{
+  height: 3.2rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--second-bg-color);
+}

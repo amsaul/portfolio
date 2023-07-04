@@ -1,0 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color:pink;
+}
+body{
+    height: 75vh;
+    background: var(--bg-color);
+}
+h1{
+    font-size: 65px;
+    background: var(--bg-color);
+    text-align: center;
+}
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.timer-content{
+    display: flex;
+    align-items: center;
+}
