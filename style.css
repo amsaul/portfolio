@@ -8,12 +8,12 @@
   scroll-behavior: smooth;
 }
 :root{
-  --bg-color: rgb(7, 7, 7);
-  --second-bg-color: rgba(49, 48, 48, 0.934);
-  --text-color: rgba(30, 124, 30, 0.842);
+  --bg-color: rgb(153, 153, 153, 1);
+  --second-bg-color: #333333;
+  --text-color: rgba(0, 255, 0, 1);
   --third-color: white;
   --fourth-color: aqua;
-  --fifth-color: rgba(235, 231, 231, 0.444);
+  --fifth-color: rgba(5, 5, 5, 0.969);
 }
 html{
   font-size: 62.9%;
@@ -31,11 +31,11 @@ section{
 .header{
   width: 100%;
   padding: 2rem 9%;
-  background:var(--bg-color);
+  background:var(--second-bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: relative;
   top: 0;
 }
 .logo{
@@ -45,14 +45,18 @@ section{
   cursor: default;
 }
 .navbar a{
+  padding: .2rem .3rem;
   font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
   transition: .1s ease;
+  background: transparent;
 }
 .navbar a:hover,
-.navbar a#item{
-  color: var(--second-bg-color);
+.navbar a.active{
+  color: var(--text-color);
+  text-decoration: underline;
+  border-bottom: 0 .2rem .5rem var(--fourth-color);
 }
 
 /* ====================home section design==================== */
@@ -92,13 +96,13 @@ span{
   align-items: center;
   width: 4rem;
   height: 4rem;
-  background: var(--third-color);
   border: .2rem var(--text-color);
   border-radius: 50%;
   font-size: 2rem;
   color: var(--text-color);
+  background: var(--third-color);
   margin: 3rem 1.5rem 3rem 0;
-  transition: .1s ease;
+  transition: .2s ease;
 }
 .social-media a:hover{
   background: var(--second-bg-color);
@@ -150,11 +154,13 @@ span{
 .about h3{
   font-size: 2.5rem;
   text-align: left;
+  color: var(--fifth-color);
 }
 .about p{
   font-size: 1.5rem;
   text-align: left;
   margin: 2rem 0rem 3rem;
+  color: var(--fifth-color);
 }
 .about span{
   color:var(--fourth-color);
@@ -188,6 +194,7 @@ span{
   border-radius: 2rem;
   padding: 3rem 2rem 4rem;
   background: var(--second-bg-color);
+  color: var(--fifth-color);
   box-shadow: 0 .1rem .5rem var(--second-bg-color);
   border-bottom: .1rem solid var(--fourth-color);
   transition: .3s ease;
@@ -199,13 +206,14 @@ span{
 .services-content h3{
   font-size: 2.5rem;
   transition: 3sec ease;
+  color: var(--text-color);
 }
 .services p{
   font-size: 1.2rem;
   padding: 1 1 3rem;
 }
 .services-content h3:hover{
-  color: var(--second-bg-color);
+  color: var(--third-color);
 }
 /*============================= portfolio design==============================*/
 .portfolio{
@@ -231,8 +239,9 @@ span{
   position: relative;
   border-radius: .5rem;
   overflow: hidden;
+  width:100%;
 }
-.portfolio img{
+.content img{
   width: 100%;
   border-radius: .5rem;
   outline: none;
@@ -296,46 +305,32 @@ span{
   scroll-snap-align: start;
 }
 /*------------------- contacts design-----------------------------------*/
-.contacts{
+#contacts{
   gap: 7rem;
   font-weight: 600;
-}
-.contact-container{
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 4rem;
+  border: 2px red solid;
 }
-.contact-content{
-  background:rgb(70, 7, 7);
+.contact-image{
+  width: 45vw;
 }
-.contacts h2{
-  font-size: 3.2rem;
-  text-decoration: underline;
+form h2{
+  font-size: 7.2rem;
 }
-.contacts input{
-  width: 100%;
-  padding: 1rem;
-  margin: 3rem;
-  outline: none;
-  border: none;
-  border-radius: 12px;
-}
-.contacts .btn{
-  padding: .2rem;
-  width: min-content;
-  height: 5rem;
-  text-align: center;
+form{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-self: center;
-  background: var(--second-bg-color);
-  color: var(--third-color);
+  align-items: center;
+  border: 1px red solid;
 }
-.contacts .btn:hover{
-  color: green;
-  background: var(--bg-color);
+form input{
+  padding: .2rem .4rem;
+  margin: 3px 4px 4px 3px;
+  width: 100%;
+  font-weight: 600;
 }
-
 
 /* ======================================footer design===========================*/
 footer{

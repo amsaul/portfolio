@@ -14,25 +14,25 @@
   <header class="header">
     <a href="#portfolio" class="logo"> Portfolio</a>
     <nav class="navbar">
-      <a href="#home" id="item">Home</a>
-      <a href="#about" id="item">About</a>
-      <a href="#services" id="item">Services</a>
-      <a href="#portfolio" id="item" onclick="activeNavItem(this)">Portfolio</a>
-      <a href="#galleria" id="item"> Galleria</a>
-      <a href="#contact" id="item">Contact</a>
+      <a href="#home" id="item" onclick="activeNavItem(this)" class="active">Home</a>
+      <a href="#about" id="item" onclick="activeNavItem(this)" class="active">About</a>
+      <a href="#services" id="item" onclick="activeNavItem(this)" class="active">Services</a>
+      <a href="#portfolio" id="item" onclick="activeNavItem(this)" class="active">Portfolio</a>
+      <a href="#galleria" id="item" onclick="activeNavItem(this)" class="active"> Galleria</a>
+      <a href="#contact" id="item" onclick="activeNavItem(this)" class="active">Contact</a>
     </nav>
   </header>
 <!------------------------- home section layout -------------------->
-  <section class="home" id="home">
+  <section class="home section active" id="home">
     <div class="home-content">
       <h3> Hello, it's Me</h3>
       <h1>Bosire Saul</h1>
       <h3> And I am a <span> Frontend Developer</span></h3>
       <p> Here is a short paragraph about me</p>
       <div class="social-media">
-        <a href="https://web.facebook.com/profile.php?id=100088255036522&sk=about"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAARxJREFUWEft1j1KBEEQhuFnFRMNRDEwNjHQM2iiBxA8g5GxgcbiIbyDsGCkGAmeQE0FU/EnUhD/6GBhaGaWnt1hHLE7m6G66q2vvm66p0Or1yEWGaZqGk0qM4VtLOMDz3jEPa5S7NAETIDYxR4WS4reYLUtmBNsDSl2i5U2YAJEgBm2WoM5w2ZXYJ4wF8Gc4gDX+EoZzyBmXAO/Ixh4sL4xj5c6EE3BhCM8WSj8iplRQMKecZWJYd4w/e9gZtGPul6PvoNhL6N/5zhMUavOmBbwkJI0ijnCfsq+NmB2cNwVmA1cdAVmCXdNw5Tliy+9Xz3aGaZq5FmZrEzKdVCMyZ7JnvnTnlnDRKGDz5LHVXKDdd4zyUlHDcwwVcr9ALXDQCSAoW7qAAAAAElFTkSuQmCC"/></a>
-        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAlFJREFUWEft1kuoTXEUx/HP9YgiJigZMKDIyCsx8MijTAwUikwkBl5hIK88SsmjSAYoyUApFAMlkTJRHsnQQIokEwbe71btczv32ufs//866Q7OrtM57fNbv/93r/9/rb069KKroxexaMM02o12Zv5nZmZiLaZgNB7jHk7jVR3IEMSn817ZNk3ECuzKrLR+OIZNDeI+Yy76YAGWF8BfavoymDDcir04kAG0J0P/s3jgG4jfAVpa2rcwv4DYjYMJQOPxFP0TtL9xFUPxFiubZeYKltSZXsdmvGiy0HYcSgCplzzCLHxqBrMNR7sZf8OR4hC+LFn0EpZlwNzBYnysjyk7M9Nxv4nxbZzHAzzHd9zEwgyYeQigLlcZTNw7gzUJ5r8QmRqEYQn6miTKPkq+EmZn8dQBk5P6DBaj8DoF5lqxnznmOdrI5gD8SIE5XlRPzgI52jiPM8oCys7MpLL9zFmtQrsP+1NhQlfrwi1k6LSahoc5MKHdgh0Y3kKigAiY0qvZPBNNaTLmYHaLgJbick9gAuBuiyDC5hkmIKopOzMRcAGrWgAUZRyd/a9GV+9dNXb2xWGsL3pDT7k24FRVcBVMLX5E8YZdVzdeVHnX/j/ZZODq4pEKMw4nsCiVoNA17Ck5pR2QYxENMKopZtrYstQrZpSNOJcaELrumYlyXo14xQ/OMarTxqGPYetNbnzZNg0sKigG5toAXeX7ARdxtlF3rTIoy0z3mJhToiSnYgxGFhl7j3eI7yeIUfVryoLNNKkH+F/XSYpvwzRKUzszjTLzB25yWyTUqK8VAAAAAElFTkSuQmCC"/></a>
-        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAcdJREFUWEft10+IjWEUx/HPbGwkKwtlR5E/CxbKxF6sKJmyGbKRLP1JKQs1Q3Y2Svm3IQuzUCZbzGxnkJomWYjIlFJiY4yOHrq9zntn4b63m7mn7uY8531/3/ec5znPuQN6yAZ6iEUfpq4adZkZxAmswzQu4lXTJc1gduFxRfg9tuNtk0AZzH3sS0Qv4XS3YV5iYyI6hv3dhrmLg4noBZzrNsy2smeWtwjPYgc+dRsm9KJMx7EWz3AZc02CxLuXTNOLD11Tfh/wBvPtsptlZi9OJg9FE3xR/FtwJYk5hI84hjNY3RLzFQ8wWhrpX49nMEdxLRGKZvi0+HfiSU3MVWxqk4EfOIzb1ZhOw0wirpLF7HsBjlP6xzoNsxhE63pkMMrZOMy7crEuK/0pg3xdWkejMHGHnce3ojKEOzUpW4Evv9c6XabYAxuwUBG/hwMJ0GbEXfjLOg0zgrOJ6KkyE1WX4lRONAUTR/ZmAhP+64l/Nx41BTOMW4loTAExDVRtD8b/FSabBuOdR3AjEY39EvumatHtH/Zh+pnp75kkA//3aYrpbH3y1VP4XPwrsTWJmUGMmFVbVTNwPW/9x7FkBvIkQe1dPZWZnwMciSTe4IS5AAAAAElFTkSuQmCC"/></a>
+        <a href="#home"><i class='bx bxl-github'></i></a>
+        <a href="#home"><i class='bx bxl-twitter'></i></a>
+        <a href="#home"><i class='bx bxl-linkedin-square'></i></a>
       </div>
       <a href="https://docs.google.com/document/d/1cKmAwGLftrrtTRc_67JH9P-xfDa1uFiIMD9GMhYR2gk/edit?usp=drive_link" class="btn" download="resume.docx">Download CV</a>
     </div>
@@ -137,21 +137,28 @@
   </section>
   <!-------------------contacts section layout----------------->
   <section class="wrapper" id="contacts">
-    <div class="contact-container">
+    <div class="contact-image">
       <img src="img3.jpg" alt="no image found">
-      <div class="contact-content">
-        <form action="action.php" novalidate>
-          <h2> CONTACT <span>Me!</span></h2>
-          <input type="text" placeholder="Please Enter your full name">
-          <input type="email" placeholder="Please Enter your email">
-          <input type="number" placeholder="Please Enter your phonenumber">
-          <input type="button" value="Let's talk" class="btn">
-        </form>
-      </div> 
+    </div>
+    <div class="contact-content">
+      <form action="action.php" novalidate>
+        <h2> contact me!</h2>
+        <input type="text" placeholder="full name">
+        <input type="email" placeholder="email">
+        <input type="number" placeholder="phonenumber">
+        <button class="btn">let's talk</button>
+      </form>
     </div>
   </section>
   <!------------------------footer section--------------------------->
-  <footer> All Rights Reserved &copy; 2023 | BSM </footer>
+  <footer>
+    <div>
+      <li><a></a></li>
+      <li><a></a></li>
+      <li><a></a></li>
+    </div>
+    <p>All Rights Reserved &copy; 2023 | BSM</p> 
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>
