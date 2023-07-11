@@ -154,15 +154,15 @@ span{
   text-align: center;
   text-decoration: underline;
 }
-.about h3{
+.about-content h3{
   font-size: 3.2rem;
-  text-align: left;
+  text-align: center;
   color: var(--fifth-color);
 }
-.about p{
+.about-content p{
   font-size: 2.5rem;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   margin: 2rem 0rem 3rem;
   letter-spacing: .1rem;
   color: var(--fifth-color);
