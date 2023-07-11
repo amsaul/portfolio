@@ -1,12 +1,12 @@
-function greet(name){
-    console.log('Hello '+name);
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+target = 12;
+//lets create a two sum function
+let twoSum = function(num, target){
+    for(let i=0; i<num.length; i++){
+        for(let j=0+1; j<num.length; j++){
+            if(num[i] + num[j] === target){
+                return [i, j];
+            }
+        }
+    }
 }
-greet('saul');
-
-//functions
-function calculate(num1, num2){
-    division = num1/num2;
-    answer = Math.floor(division);
-    return answer;
-}
-console.log('calculating... ', calculate(32, 0.2));
