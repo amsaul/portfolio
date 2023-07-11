@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
+  border: 1px red solid;
   scroll-behavior: smooth;
 }
 :root{
@@ -324,6 +325,7 @@ span{
   font-weight: 600;
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 2px red solid;
 }
 .contact-image{
@@ -331,6 +333,8 @@ span{
 }
 form h2{
   font-size: 7.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 form{
   display: flex;
