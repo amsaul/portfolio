@@ -5,7 +5,6 @@
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
-  border: 1px red solid;
   scroll-behavior: smooth;
 }
 :root{
@@ -326,7 +325,6 @@ span{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px red solid;
 }
 .contact-image{
   width: 45vw;
@@ -341,7 +339,6 @@ form{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px red solid;
 }
 form input{
   padding: .2rem .4rem;
