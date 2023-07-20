@@ -390,18 +390,21 @@ footer{
   border-radius: 100%;
 }
 /* anitamtion for slide in*/
-.section{
+.section-content{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.section-img{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.push-left{
   opacity: 0;
   transform: translateX(-50px);
-  animation: slideIn 0.5s forwards;
 }
-@keyframes slideIn{
-  0%{
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0px);
-  }
+.push-right{
+  opacity: 1;
+  transform: translateX(50px);
 }
